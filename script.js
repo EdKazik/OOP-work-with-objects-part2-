@@ -19,12 +19,18 @@ function Building(maxApartment) {
 if(this.apartments > this.maxApartment) {
 	console.log(`Error`)
 } else {
-		this.apartments.push(Apartment)
+		this.createApartment = function(newApartment) {
+    this.apartments.push(Apartment)
+		}
 	}
-  /* console.log(this.apartments) */
+  console.log(this.apartments)
 }
 
 const newBuilding = new Building(7);
 const Flat = new Apartment();
-const Max = new Human('Max', 'gender');
-Flat.createResident(new Human(Max));
+const Max = new Human('Max', 'female');
+const Lara = new Human('Lara', 'male');
+const Mark = new Human('Mark', 'female');
+Flat.createResident(Max);
+Flat.createResident(Lara);
+newBuilding.createApartment(Flat)
