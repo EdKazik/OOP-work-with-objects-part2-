@@ -16,7 +16,7 @@ function Building(maxApartment) {
   this.maxApartment = maxApartment;
   this.apartments = [];
 
-if(this.apartments > this.maxApartment || this.createApartment instanceof Apartment) {
+if(this.apartments > this.maxApartment || this.createApartment instanceof Apartment !== false) {
 	console.log(`Error`)
 } else {
 		this.createApartment = function(newApartment) {
